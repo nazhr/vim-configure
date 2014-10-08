@@ -390,8 +390,41 @@ config -- .vimrc
 
 	let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
+12. TaskList install
+
+commit : 调用任务列表窗口
+
+url : http://www.vim.org/scripts/script.php?script_id=2607
+
+cmd : 
+	*
+
+install : 
+	cp -r * ../../
+
+config -- .vimrc
+	map t :TaskList<CR>
+
+12. Tabpage install
+
+commit : 一个分页容纳一或多个窗口。分页间很容易切换，这种方式使你可以拥有多个窗口集合，每个集合做不同的工作。
+
+url : http://www.vim.org/scripts/script.php?script_id=3712
+
+cmd : 
+	*
+
+install : 
+	cp -r * ../../
+
+config -- .vimrc
+	set showtabline=2 				" always show tabs in gvim, but not vim
+	set guitablabel=%t
+*************************************************************************************************
 
 * 其它插件
+CSCope
+    通过Cscope可以方便地获知某个函数的定义以及被哪些函数调用。
 Fugitive
     让 Vim 更好地与 Git 整合。 
 Powerline
