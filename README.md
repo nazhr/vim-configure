@@ -214,4 +214,48 @@ install :
 
 config -- .vimrc
 
+    "pydiction 1.2 python auto complete
+    filetype plugin on
+    let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
+    "defalut g:pydiction_menu_height == 15
+    "let g:pydiction_menu_height = 20 
 
+11. Neocomplcache install
+
+    commit : Neocomplcache 自动补全
+
+    url :   http://www.vim.org/scripts/script.php?script_id=2620
+
+    cmd : 
+        *
+
+    install : 
+        cp -r * ../../
+
+    config -- .vimrc
+        let g:neocomplcache_enable_at_startup = 1
+
+* 其它插件(选择安装)
+Fugitive
+    让 Vim 更好地与 Git 整合。 
+Powerline
+    炫丽实用的状态栏 
+Tagbar
+    比 taglist 更现代的代码结构浏览工具 
+The NERD tree
+    以树形结构浏览文件夹中的文件 
+Syntastic
+    语法检查 
+surround.vim
+    快速删除/修改光标周围配对的括号 
+
+Project
+    方便管理工程中的文件 
+snipmate.vim
+    在编辑中实现模板展开 
+a.vim
+    在.cpp/.h等文件对中跳转 
+matchit.zip
+    增强%的功能 
+winmanager
+    将文件管理窗口和taglist堆叠起来。 

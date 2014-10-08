@@ -405,8 +405,6 @@ Syntastic
 surround.vim
     快速删除/修改光标周围配对的括号 
 
-其它常用插件[14]：
-
 Project
     方便管理工程中的文件 
 snipmate.vim
