@@ -38,8 +38,6 @@ autocmd! bufwritepost vimrc source ~/.vimrc			" When vimrc is edited, reload it
 " ===> VIM user interface
 " ******************************************************************************************** "
 
-set completeopt=preview,menu 					" 代码补全 
-
 set shortmess=atI						" 启动的时候不显示那个援助乌干达儿童的提示  
 
 set go=      							" 不要图形按钮  
@@ -209,6 +207,7 @@ nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>    	" 为方便复制，�
 " 拼写建议                        	CTRL-X CTRL-S 
 " ******************************************************************************************** "
 
+set completeopt=preview,menu 					" 代码补全 
 " set completeopt+=longest									" 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 
 " autocmd InsertLeave * if pumvisible() == 0|pclose|endif					" 离开插入模式后自动关闭预览窗口
@@ -366,6 +365,12 @@ let Tlist_Show_One_File=0                    	" 只显示当前文件的tags
 let Tlist_Exit_OnlyWindow=1                  	" 如果Taglist窗口是最后一个窗口则退出Vim
 let Tlist_Use_Right_Window=1                 	" 在右侧窗口中显示taglist窗口
 let Tlist_File_Fold_Auto_Close=1             	" 自动折叠
+
+" ******************************************************************************************** "
+" ===> tabpage plugin
+" ******************************************************************************************** "
+set showtabline=2 				" tab page height
+set guitablabel=%t
 
 " ******************************************************************************************** "
 " ===> bufexplorer plugin
