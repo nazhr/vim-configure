@@ -29,6 +29,7 @@ map <C-n> :tabnew<cr>           " 新tab
 map <C-k> :bn<cr>               " 下一个文件
 map <C-j> :bp<cr>               " 上一个文件
 ```
+
 2. NERDTree-Tabs install
 ---
 ##commit : 
@@ -51,6 +52,7 @@ let g:nerdtree_tabs_open_on_console_startup=1       	" 设置打开vim的时候�
 map <F3> :NERDTreeTabsToggle <CR>         		" 设置打开目录树的快捷键
 imap <F3> :NERDTreeTabsToggle <CR>         		" 设置关闭目录树的快捷键
 ```
+
 3. vimcdoc install
 ---
 ##commit : 
@@ -73,6 +75,7 @@ set helplang=cn			" setting zh_cn
 set helplang=en			" setting en_us
 set encoding=utf-8
 ```
+
 4. ctags install
 ---
 ##commit : 
@@ -92,6 +95,7 @@ set encoding=utf-8
 set tags=tags  		" 设置tags  
 set autochdir 
 ```
+
 5. ctags install
 ---
 ##url : 
@@ -108,6 +112,7 @@ set autochdir
 set tags=tags  		" 设置tags  
 set autochdir 
 ```
+
 6. taglist install
 ---
 ##url : 
@@ -122,7 +127,7 @@ set autochdir
 ##config -- .vimrc
 
 		nnoremap <silent> <F8> :TlistToggle<CR><CR>	" 按F8按钮，在窗口的左侧出现taglist的窗口, 像vc的左侧的workpace
-｀｀｀
+```
 " :Tlist              				" 调用TagList
 let Tlist_Auto_Open=0 				" 默认打开Taglist 
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'  
@@ -130,7 +135,8 @@ let Tlist_Show_One_File=1                    	" 只显示当前文件的tags
 let Tlist_Exit_OnlyWindow=1                  	" 如果Taglist窗口是最后一个窗口则退出Vim
 let Tlist_Use_Right_Window=1                 	" 在右侧窗口中显示taglist窗口
 let Tlist_File_Fold_Auto_Close=1             	" 自动折叠
-｀｀｀
+```
+
 7. bufexplorer install
 ---
 ##commit : 
@@ -149,6 +155,7 @@ let Tlist_File_Fold_Auto_Close=1             	" 自动折叠
 ```
 map <F6> :BufExplorer<CR>
 ```
+
 8. Minibuffer install
 ---
 ##commit : 
@@ -234,6 +241,7 @@ pydiction 用来实现代码补全和语法提示功能
 	$ cp complete-dict ~/.vim
 	$ cp pydiction.py ~/.vim
 ```
+
 ##config -- .vimrc
 ```
 "pydiction 1.2 python auto complete
@@ -245,7 +253,8 @@ let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
 
 11. Neocomplcache install
 ---
-##commit : Neocomplcache 自动补全
+##commit : 
+Neocomplcache 自动补全
 
 ##url :   
 		http://www.vim.org/scripts/script.php?script_id=2620
@@ -273,7 +282,6 @@ Syntastic	<br/>
     语法检查 	<br/>
 surround.vim	<br/>
     快速删除/修改光标周围配对的括号 	<br/>
-
 Project	<br/>
     方便管理工程中的文件 	<br/>
 snipmate.vim<br/>
