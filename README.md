@@ -1,153 +1,168 @@
-°²×° £º
-1. ÔÚLinuxÖĞÅäÖÃ£¬½«vim-configureÄ¿Â¼¿½±´µ½~/Ä¿Â¼ÏÂ£¬²¢ÇÒ½«ÎÄ¼şÃûĞŞ¸Ä³É.vim ¡£
-2. ½«.vimrcÎÄ¼ş¿½±´µ½~/Ä¿Â¼ÏÂ¡£
+å®‰è£… ï¼š
+===
+1. åœ¨Linuxä¸­é…ç½®ï¼Œå°†vim-configureç›®å½•æ‹·è´åˆ°~/ç›®å½•ä¸‹ï¼Œå¹¶ä¸”å°†æ–‡ä»¶åä¿®æ”¹æˆ.vim ã€‚
+2. å°†.vimrcæ–‡ä»¶æ‹·è´åˆ°~/ç›®å½•ä¸‹ã€‚
 
-ÅäÖÃÈÕÖ¾£º
+é…ç½®æ—¥å¿—ï¼š
+===
 1. NERDTree install
+---
+##commit : 
+ç›®å½•æ ‘
 
-commit : Ä¿Â¼Ê÷
+##url : 
+		https://github.com/scrooloose/nerdtree.git
 
-url : https://github.com/scrooloose/nerdtree.git
+##cmd : 
+		mkdir bundle
+		cd ~/.vim/bundle
+		git clone https://github.com/scrooloose/nerdtree.git
 
-cmd : 
-	mkdir bundle
-	cd ~/.vim/bundle
-	git clone https://github.com/scrooloose/nerdtree.git
+##install : 
+		cp * ../../
 
-install : 
-	cp * ../../
+##config -- .vimrc
 
-config -- .vimrc
-
-map <C-l> :tabn<cr>             " ÏÂÒ»¸ötab
-map <C-h> :tabp<cr>             " ÉÏÒ»¸ötab
-map <C-n> :tabnew<cr>           " ĞÂtab
-map <C-k> :bn<cr>               " ÏÂÒ»¸öÎÄ¼ş
-map <C-j> :bp<cr>               " ÉÏÒ»¸öÎÄ¼ş
+		map <C-l> :tabn<cr>             " ä¸‹ä¸€ä¸ªtab
+		map <C-h> :tabp<cr>             " ä¸Šä¸€ä¸ªtab
+		map <C-n> :tabnew<cr>           " æ–°tab
+		map <C-k> :bn<cr>               " ä¸‹ä¸€ä¸ªæ–‡ä»¶
+		map <C-j> :bp<cr>               " ä¸Šä¸€ä¸ªæ–‡ä»¶
 
 2. NERDTree-Tabs install
+---
+##commit : 
+ç›®å½•æ ‘
 
-commit : Ä¿Â¼Ê÷
+##url : 
+		https://github.com/jistr/vim-nerdtree-tabs.git
 
-url : https://github.com/jistr/vim-nerdtree-tabs.git
+##cmd : 
+		mkdir bundle
+		cd ~/.vim/bundle
+		git clone https://github.com/jistr/vim-nerdtree-tabs.git
 
-cmd : 
-	mkdir bundle
-	cd ~/.vim/bundle
-	git clone https://github.com/jistr/vim-nerdtree-tabs.git
+##install : 
+		cp * ../../
 
-install : 
-	cp * ../../
+##config -- .vimrc
 
-config -- .vimrc
-
-let g:nerdtree_tabs_open_on_console_startup=1       	" ÉèÖÃ´ò¿ªvimµÄÊ±ºòÄ¬ÈÏ´ò¿ªÄ¿Â¼Ê÷
-map <F3> :NERDTreeTabsToggle <CR>         		" ÉèÖÃ´ò¿ªÄ¿Â¼Ê÷µÄ¿ì½İ¼ü
-imap <F3> :NERDTreeTabsToggle <CR>         		" ÉèÖÃ¹Ø±ÕÄ¿Â¼Ê÷µÄ¿ì½İ¼ü
+		let g:nerdtree_tabs_open_on_console_startup=1       	" è®¾ç½®æ‰“å¼€vimçš„æ—¶å€™é»˜è®¤æ‰“å¼€ç›®å½•æ ‘
+		map <F3> :NERDTreeTabsToggle <CR>         		" è®¾ç½®æ‰“å¼€ç›®å½•æ ‘çš„å¿«æ·é”®
+		imap <F3> :NERDTreeTabsToggle <CR>         		" è®¾ç½®å…³é—­ç›®å½•æ ‘çš„å¿«æ·é”®
 
 3. vimcdoc install
+---
+##commit : 
+ä¸­æ–‡å¸®åŠ©æ–‡æ¡£
 
-commit : ÖĞÎÄ°ïÖúÎÄµµ
+##url : 
+		http://sourceforge.net/projects/vimcdoc/files/vimcdoc/1.8.0/vimcdoc-1.8.0.tar.gz
 
-url : http://sourceforge.net/projects/vimcdoc/files/vimcdoc/1.8.0/vimcdoc-1.8.0.tar.gz
+##cmd : 
+		mkdir bundle
+		cd ~/.vim/bundle
+		wget http://sourceforge.net/projects/vimcdoc/files/vimcdoc/1.8.0/vimcdoc-1.8.0.tar.gz
 
-cmd : 
-	mkdir bundle
-	cd ~/.vim/bundle
-	wget http://sourceforge.net/projects/vimcdoc/files/vimcdoc/1.8.0/vimcdoc-1.8.0.tar.gz
+##install : 
+		./vimcdoc.sh -i
 
-install : 
-	./vimcdoc.sh -i
+##config -- .vimrc
 
-config -- .vimrc
-
-set helplang=cn			" setting zh_cn
-set helplang=en			" setting en_us
-set encoding=utf-8
+		set helplang=cn			" setting zh_cn
+		set helplang=en			" setting en_us
+		set encoding=utf-8
 
 4. ctags install
+---
+##commit : 
+æ–¹æ³•/å‡½æ•°ç´¢å¼•
 
-commit : ·½·¨/º¯ÊıË÷Òı
+##url : 
+*
 
-url : *
+##cmd : 
+		ctags -R *
 
-cmd : 
-	ctags -R *
+##install : 
+		sudo apt-get install ctags
 
-install : 
-	sudo apt-get install ctags
+##config -- .vimrc
 
-config -- .vimrc
-
-set tags=tags  		" ÉèÖÃtags  
-set autochdir 
+		set tags=tags  		" è®¾ç½®tags  
+		set autochdir 
 
 5. ctags install
+---
+##url : 
+*
 
-url : *
+##cmd : 
+		ctags -R *
 
-cmd : 
-	ctags -R *
+##install : 
+		sudo apt-get install ctags
 
-install : 
-	sudo apt-get install ctags
+##config -- .vimrc
 
-config -- .vimrc
-
-set tags=tags  		" ÉèÖÃtags  
-set autochdir 
+		set tags=tags  		" è®¾ç½®tags  
+		set autochdir 
 
 6. taglist install
+---
+##url : 
+		http://www.vim.org/scripts/script.php?script_id=273
 
-url : http://www.vim.org/scripts/script.php?script_id=273
+##cmd : 
+*
 
-cmd : 
-	*
+##install : 
+		cp -r * ../../
 
-install : 
-	cp -r * ../../
+##config -- .vimrc
 
-config -- .vimrc
-
-nnoremap <silent> <F8> :TlistToggle<CR><CR>	" °´F8°´Å¥£¬ÔÚ´°¿ÚµÄ×ó²à³öÏÖtaglistµÄ´°¿Ú, ÏñvcµÄ×ó²àµÄworkpace
-" :Tlist              				" µ÷ÓÃTagList
-let Tlist_Auto_Open=0 				" Ä¬ÈÏ´ò¿ªTaglist 
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'  
-let Tlist_Show_One_File=1                    	" Ö»ÏÔÊ¾µ±Ç°ÎÄ¼şµÄtags
-let Tlist_Exit_OnlyWindow=1                  	" Èç¹ûTaglist´°¿ÚÊÇ×îºóÒ»¸ö´°¿ÚÔòÍË³öVim
-let Tlist_Use_Right_Window=1                 	" ÔÚÓÒ²à´°¿ÚÖĞÏÔÊ¾taglist´°¿Ú
-let Tlist_File_Fold_Auto_Close=1             	" ×Ô¶¯ÕÛµş
+		nnoremap <silent> <F8> :TlistToggle<CR><CR>	" æŒ‰F8æŒ‰é’®ï¼Œåœ¨çª—å£çš„å·¦ä¾§å‡ºç°taglistçš„çª—å£, åƒvcçš„å·¦ä¾§çš„workpace
+		" :Tlist              				" è°ƒç”¨TagList
+		let Tlist_Auto_Open=0 				" é»˜è®¤æ‰“å¼€Taglist 
+		let Tlist_Ctags_Cmd = '/usr/bin/ctags'  
+		let Tlist_Show_One_File=1                    	" åªæ˜¾ç¤ºå½“å‰æ–‡ä»¶çš„tags
+		let Tlist_Exit_OnlyWindow=1                  	" å¦‚æœTaglistçª—å£æ˜¯æœ€åä¸€ä¸ªçª—å£åˆ™é€€å‡ºVim
+		let Tlist_Use_Right_Window=1                 	" åœ¨å³ä¾§çª—å£ä¸­æ˜¾ç¤ºtaglistçª—å£
+		let Tlist_File_Fold_Auto_Close=1             	" è‡ªåŠ¨æŠ˜å 
 
 7. bufexplorer install
+---
+##commit : 
+æ’ä»¶ bufexplorer æ˜¯ä¸€æ¬¾å¯ä»¥è®©ä½ æ›´åŠ è½»æ¾çš„åœ¨å„ä¸ª buffer ä¹‹é—´è¿›è¡Œåˆ‡æ¢ã€‚
 
-commit : ²å¼ş bufexplorer ÊÇÒ»¿î¿ÉÒÔÈÃÄã¸ü¼ÓÇáËÉµÄÔÚ¸÷¸ö buffer Ö®¼ä½øĞĞÇĞ»»¡£
+##url : 
+		http://www.vim.org/scripts/script.php?script_id=42
 
-url : http://www.vim.org/scripts/script.php?script_id=42
+##cmd : 
+*
 
-cmd : 
-	*
+##install : 
+		cp -r * ../../
 
-install : 
-	cp -r * ../../
+##config -- .vimrc
 
-config -- .vimrc
-
-map <F6> :BufExplorer<CR>
+		map <F6> :BufExplorer<CR>
 
 8. Minibuffer install
+---
+##commit : 
 
-commit : 
+##url : 
+http://www.vim.org/scripts/script.php?script_id=159
 
-url : http://www.vim.org/scripts/script.php?script_id=159
+##cmd : 
+*
 
-cmd : 
-	*
+##install : 
+		cp -r * ../../
 
-install : 
-	cp -r * ../../
-
-config -- .vimrc
-
+##config -- .vimrc
+```
 let g:miniBufExplModSelTarget = 1
 let g:miniBufExplorerMoreThanOne = 2
 let g:miniBufExplUseSingleClick = 1
@@ -167,21 +182,23 @@ map <leader>u :TMiniBufExplorer<cr>
 
 hi MBEChanged guibg=darkblue ctermbg=darkblue 
 "" termbg=darkblue
+```
 
 9. Spell Check install
+---
+##commit : 
+Vim è‡ªå¸¦çš„æ‹¼å†™æ£€æŸ¥(Spell Check)
 
-commit : Vim ×Ô´øµÄÆ´Ğ´¼ì²é(Spell Check)
+##url : 
+https://github.com/vim-scripts/SpellCheck
 
-url : https://github.com/vim-scripts/SpellCheck
+##cmd : 
+*
 
-cmd : 
-	*
-
-install : 
+##install : 
 	
-
-config -- .vimrc
-
+##config -- .vimrc
+```
 "Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
@@ -190,72 +207,78 @@ map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
+```
 
 10. Pydiction install
+---
+##commit : 
+pydiction ç”¨æ¥å®ç°ä»£ç è¡¥å…¨å’Œè¯­æ³•æç¤ºåŠŸèƒ½
 
-commit : pydiction ÓÃÀ´ÊµÏÖ´úÂë²¹È«ºÍÓï·¨ÌáÊ¾¹¦ÄÜ
+##url : 
+		https://github.com/rkulla/pydiction.git 
 
-url : https://github.com/rkulla/pydiction.git 
+##cmd : 
+*
 
-cmd : 
-	*
+##install : 
+	* Linux/Unixç³»ç»Ÿï¼šå°†python_pydiction.vimæ–‡ä»¶å¤åˆ¶åˆ° ~/.vim/after/ftplugin ç›®å½•ä¸‹ã€‚å¦‚æœè¯¥ç›®å½•ä¸å­˜åœ¨ï¼Œåˆ™åˆ›å»ºå®ƒï¼Œvimä¼šè‡ªåŠ¨åœ¨æ­¤ç›®å½•ä¸‹æœç´¢ã€‚
 
-install : 
-	* Linux/UnixÏµÍ³£º½«python_pydiction.vimÎÄ¼ş¸´ÖÆµ½ ~/.vim/after/ftplugin Ä¿Â¼ÏÂ¡£Èç¹û¸ÃÄ¿Â¼²»´æÔÚ£¬Ôò´´½¨Ëü£¬vim»á×Ô¶¯ÔÚ´ËÄ¿Â¼ÏÂËÑË÷¡£
+ã€€ã€€	* Windowsç³»ç»Ÿï¼šå°†python_pydiction.vimæ–‡ä»¶å¤åˆ¶åˆ° C:\vim\vimfiles\ftplugin ç›®å½•ä¸‹ï¼ˆå‡è®¾ä½ çš„Vimå®‰è£…è·¯å¾„ä¸ºC:\vimï¼‰
 
-¡¡¡¡	* WindowsÏµÍ³£º½«python_pydiction.vimÎÄ¼ş¸´ÖÆµ½ C:\vim\vimfiles\ftplugin Ä¿Â¼ÏÂ£¨¼ÙÉèÄãµÄVim°²×°Â·¾¶ÎªC:\vim£©
-
-¡¡¡¡	* ³ı´ËÖ®ÍâµÄÁíÁ½¸öÎÄ¼şcomplete-dictºÍpydiction.py¿ÉÒÔ·ÅÖÃµ½ÈÎºÎÄãÏë·ÅÖÃµÄÎ»ÖÃ£¬µ«ÔÚftpluginÄ¿Â¼ÏÂ×îºÃÖ»´æ·Åpython_pydiction.vim¶ø²»Ó¦¸Ã»¹ÓĞÆäËûÎÄ¼ş¡£
-	½øÈë½âÑ¹ºóµÄpydictionÄ¿Â¼
+ã€€ã€€	* é™¤æ­¤ä¹‹å¤–çš„å¦ä¸¤ä¸ªæ–‡ä»¶complete-dictå’Œpydiction.pyå¯ä»¥æ”¾ç½®åˆ°ä»»ä½•ä½ æƒ³æ”¾ç½®çš„ä½ç½®ï¼Œä½†åœ¨ftpluginç›®å½•ä¸‹æœ€å¥½åªå­˜æ”¾python_pydiction.vimè€Œä¸åº”è¯¥è¿˜æœ‰å…¶ä»–æ–‡ä»¶ã€‚
+	è¿›å…¥è§£å‹åçš„pydictionç›®å½•
 
 	$ cp after/ftplugin/python_pydiction.vim ~/.vim/after/ftplugin
 	$ cp complete-dict ~/.vim
 	$ cp pydiction.py ~/.vim
 
-config -- .vimrc
-
+##config -- .vimrc
+```
     "pydiction 1.2 python auto complete
     filetype plugin on
     let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
     "defalut g:pydiction_menu_height == 15
     "let g:pydiction_menu_height = 20 
+```
 
 11. Neocomplcache install
+---
+##commit : Neocomplcache è‡ªåŠ¨è¡¥å…¨
 
-    commit : Neocomplcache ×Ô¶¯²¹È«
+##url :   
+http://www.vim.org/scripts/script.php?script_id=2620
 
-    url :   http://www.vim.org/scripts/script.php?script_id=2620
+##cmd : 
+*
+##install : 
+		cp -r * ../../
 
-    cmd : 
-        *
-
-    install : 
-        cp -r * ../../
-
-    config -- .vimrc
+##config -- .vimrc
+```
         let g:neocomplcache_enable_at_startup = 1
+```
 
-* ÆäËü²å¼ş(Ñ¡Ôñ°²×°)
+* å…¶å®ƒæ’ä»¶(é€‰æ‹©å®‰è£…)
 Fugitive
-    ÈÃ Vim ¸üºÃµØÓë Git ÕûºÏ¡£ 
+    è®© Vim æ›´å¥½åœ°ä¸ Git æ•´åˆã€‚ 
 Powerline
-    ìÅÀöÊµÓÃµÄ×´Ì¬À¸ 
+    ç‚«ä¸½å®ç”¨çš„çŠ¶æ€æ  
 Tagbar
-    ±È taglist ¸üÏÖ´úµÄ´úÂë½á¹¹ä¯ÀÀ¹¤¾ß 
+    æ¯” taglist æ›´ç°ä»£çš„ä»£ç ç»“æ„æµè§ˆå·¥å…· 
 The NERD tree
-    ÒÔÊ÷ĞÎ½á¹¹ä¯ÀÀÎÄ¼ş¼ĞÖĞµÄÎÄ¼ş 
+    ä»¥æ ‘å½¢ç»“æ„æµè§ˆæ–‡ä»¶å¤¹ä¸­çš„æ–‡ä»¶ 
 Syntastic
-    Óï·¨¼ì²é 
+    è¯­æ³•æ£€æŸ¥ 
 surround.vim
-    ¿ìËÙÉ¾³ı/ĞŞ¸Ä¹â±êÖÜÎ§Åä¶ÔµÄÀ¨ºÅ 
+    å¿«é€Ÿåˆ é™¤/ä¿®æ”¹å…‰æ ‡å‘¨å›´é…å¯¹çš„æ‹¬å· 
 
 Project
-    ·½±ã¹ÜÀí¹¤³ÌÖĞµÄÎÄ¼ş 
+    æ–¹ä¾¿ç®¡ç†å·¥ç¨‹ä¸­çš„æ–‡ä»¶ 
 snipmate.vim
-    ÔÚ±à¼­ÖĞÊµÏÖÄ£°åÕ¹¿ª 
+    åœ¨ç¼–è¾‘ä¸­å®ç°æ¨¡æ¿å±•å¼€ 
 a.vim
-    ÔÚ.cpp/.hµÈÎÄ¼ş¶ÔÖĞÌø×ª 
+    åœ¨.cpp/.hç­‰æ–‡ä»¶å¯¹ä¸­è·³è½¬ 
 matchit.zip
-    ÔöÇ¿%µÄ¹¦ÄÜ 
+    å¢å¼º%çš„åŠŸèƒ½ 
 winmanager
-    ½«ÎÄ¼ş¹ÜÀí´°¿ÚºÍtaglist¶ÑµşÆğÀ´¡£ 
+    å°†æ–‡ä»¶ç®¡ç†çª—å£å’Œtaglistå †å èµ·æ¥ã€‚ 
