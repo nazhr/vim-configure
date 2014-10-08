@@ -407,7 +407,7 @@ config -- .vimrc
 
 12. Tabpage install
 
-commit : 一个分页容纳一或多个窗口。分页间很容易切换，这种方式使你可以拥有多个窗口集合，每个集合做不同的工作。
+commit : 一个分页容纳一或多个窗口。分页间很容易切换，这种方式使你可以拥有多个窗口集合，每个集合做不同的工作
 
 url : http://www.vim.org/scripts/script.php?script_id=3712
 
@@ -418,23 +418,23 @@ install :
 	cp -r * ../../
 
 config -- .vimrc
-	set showtabline=2 				" always show tabs in gvim, but not vim
+	set showtabline=2 				" set tab page height
 	set guitablabel=%t
 *************************************************************************************************
 
 * 其它插件
 CSCope
-    通过Cscope可以方便地获知某个函数的定义以及被哪些函数调用。
+    通过Cscope可以方便地获知某个函数的定义以及被哪些函数调用
 Fugitive
-    让 Vim 更好地与 Git 整合。 
+    让 Vim 更好地与 Git 整合
 Powerline
     炫丽实用的状态栏 
 Tagbar
-    比 taglist 更现代的代码结构浏览工具 
+    比 taglist 更现代的代码结构浏览工具
 The NERD tree
-    以树形结构浏览文件夹中的文件 
+    以树形结构浏览文件夹中的文件
 Syntastic
-    语法检查 
+    语法检查
 surround.vim
     快速删除/修改光标周围配对的括号 
 
@@ -447,7 +447,7 @@ a.vim
 matchit.zip
     增强%的功能 
 winmanager
-    将文件管理窗口和taglist堆叠起来。 
+    将文件管理窗口和taglist堆叠起来
 
 
 
