@@ -12,19 +12,18 @@
 
 syntax on							" 语法高亮
 
-filetype on							" 侦测文件类型
-
 set showcmd							" 在状态栏显示正在输入的命令
 
 set number							" 显示行号
 
-set cul 							"高亮光标所在行
+set cul 							" 高亮光标所在行
 set cuc
 
-" filetype plugin on						" 载入文件类型插件
-" filetype indent on
+filetype on							" 侦测文件类型
+filetype plugin on						" 载入文件类型插件
+filetype indent on
  
-" NoMatchParen							"关闭/打开配对括号高亮
+" NoMatchParen							" 关闭/打开配对括号高亮
 " DoMatchParen
 
 set history=1000						" 历史记录数
@@ -39,7 +38,7 @@ autocmd! bufwritepost vimrc source ~/.vimrc			" When vimrc is edited, reload it
 " ===> VIM user interface
 " ******************************************************************************************** "
 
-set completeopt=preview,menu 					"代码补全 
+set completeopt=preview,menu 					" 代码补全 
 
 set shortmess=atI						" 启动的时候不显示那个援助乌干达儿童的提示  
 
@@ -53,9 +52,13 @@ set scrolloff=3  						" 光标移动到buffer的顶部和底部时保持3行距
 
 " set foldenable  						" 允许折叠 
 
-" set foldmethod=manual   					" 手动折叠      
+" set foldmethod=manual   					" 手动折叠 
 
-set nocompatible  						"去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限    
+" set foldmethod=syntax						" 代码较长时可启用代码折叠功能，如按语法高亮元素折叠   
+
+" set foldlevel=5  						" 默认情况下不折叠
+
+set nocompatible  						" 去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限    
 
 set viminfo+=!							" 保存全局变量
 
@@ -70,7 +73,6 @@ set guioptions-=T           					" 隐藏工具栏
 set guioptions-=m           					" 隐藏菜单栏
 " set foldcolumn=0
 " set foldmethod=indent 
-" set foldlevel=3 
 
 set ignorecase							" 搜索忽略大小写
 
@@ -82,7 +84,9 @@ set fillchars=vert:\ ,stl:\ ,stlnc:\				" 在被分割的窗口间显示空白�
 
 set cmdheight=2							" 总是显示状态行
 
-set hlsearch							"搜索逐字符高亮
+set hlsearch							" 搜索逐字符高亮
+
+"set clipboard+=unnamed						" 共享剪贴板
 
 
 " ******************************************************************************************** "
@@ -110,7 +114,7 @@ set nobackup							" 禁止生成临时文件
 set noswapfile
 set nowb
 
-set autowrite							"自动保存
+set autowrite							" 自动保存
 
 " ******************************************************************************************** "
 " ===> Statusline configure
@@ -143,7 +147,7 @@ endfunction
 
 set backspace=2							" 使回格键（backspace）正常处理indent, eol, start等
 
-nmap tt :%s/\t/    /g<CR>					"将tab替换为空格
+nmap tt :%s/\t/    /g<CR>					" 将tab替换为空格
 
 set mouse=a							" 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
 set selection=exclusive
@@ -169,21 +173,90 @@ set smarttab							" 在行和段开始处使用制表符
 
 set incsearch
 
-set langmenu=zh_CN.UTF-8					"语言设置
+set langmenu=zh_CN.UTF-8					" 语言设置
 
 set linespace=0							" 调整文本行距
 
-set ai 								"Auto indent
+set ai 								" Auto indent
 
-set si 								"Smart indet
+set si 								" Smart indet
 
-set wrap 							"Wrap lines
+set wrap 							" Wrap lines
 
 " ******************************************************************************************** "
 " ===> Keyborad
 " ******************************************************************************************** "
 
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>    	" 为方便复制，用<F2>开启/关闭行号显示
+
+" ******************************************************************************************** "
+" ===> Vim Omni Complete (智能补全)
+" ******************************************************************************************** "
+
+"" 智能补全帮助
+" :help compl-omni-filetypes
+"" cmd
+" 整行补全                        	CTRL-X CTRL-L
+" 根据当前文件里关键字补全        	CTRL-X CTRL-N
+" 根据字典补全                    	CTRL-X CTRL-K
+" 根据同义词字典补全              	CTRL-X CTRL-T
+" 根据头文件内关键字补全          	CTRL-X CTRL-I
+" 根据标签补全                    	CTRL-X CTRL-]
+" 补全文件名                      	CTRL-X CTRL-F
+" 补全宏定义                      	CTRL-X CTRL-D
+" 补全vim命令                     	CTRL-X CTRL-V
+" 用户自定义补全方式              	CTRL-X CTRL-U
+" 拼写建议                        	CTRL-X CTRL-S 
+" ******************************************************************************************** "
+
+" set completeopt+=longest									" 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+
+" autocmd InsertLeave * if pumvisible() == 0|pclose|endif					" 离开插入模式后自动关闭预览窗口
+
+" inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"					" 回车即选中当前项
+
+" inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"				" 上下左右键的行为
+" inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+" inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+" inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+
+" 设置补全的字典文件
+" au FileType php setlocal dict+=~/.vim/dict/php_funclist.dict
+" au FileType css setlocal dict+=~/.vim/dict/css.dict
+" au FileType c setlocal dict+=~/.vim/dict/c.dict
+" au FileType cpp setlocal dict+=~/.vim/dict/cpp.dict
+" au FileType scale setlocal dict+=~/.vim/dict/scale.dict
+" au FileType javascript setlocal dict+=~/.vim/dict/javascript.dict
+" au FileType html setlocal dict+=~/.vim/dict/javascript.dict
+" au FileType html setlocal dict+=~/.vim/dict/css.dict
+
+" ******************************************************************************************** "
+" ===> 英文拼写检查
+" ====> 拼写错误被画红线，比缺省设置更美观 "
+" ******************************************************************************************** "
+
+set spell spelllang=en_us
+setlocal spell spelllang=en_us
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal term=underline cterm=underline
+
+" ******************************************************************************************** "
+" ===> Encodings
+" ******************************************************************************************** "
+
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set langmenu=zh_CN.UTF-8
+language messages zh_CN.UTF-8
+set guifontset=wenquanyi,-*-16-*-*-*
 
 
 " ******************************************************************************************** "
@@ -237,6 +310,13 @@ endfunc
 autocmd BufNewFile * normal G
 
 " ******************************************************************************************** "
+" ===> Open file operators
+" ******************************************************************************************** "
+autocmd vimenter * if !argc() | NERDTree | endif	"当打开vim且没有文件时自动打开NERDTree
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif		" 只剩 NERDTree时自动关闭
+
+" ******************************************************************************************** "
 " ===> plugins configure
 " ******************************************************************************************** "
 
@@ -248,7 +328,7 @@ let g:nerdtree_tabs_open_on_console_startup=1       	"设置打开vim的时候�
 map <F3> :NERDTreeTabsToggle <CR>         		"设置打开目录树的快捷键
 imap <F3> :NERDTreeTabsToggle <CR>         		"设置关闭目录树的快捷键
 map <C-F3> \be  
-:autocmd BufRead,BufNewFile *.dot map <F5> :w<CR>:!dot -Tjpg -o %<.jpg % && eog %<.jpg  <CR><CR> && exec "redr!"	"打开树状文件目录  
+:autocmd BufRead,BufNewFile *.dot map <F5> :w<CR>:!dot -Tjpg -o %<.jpg % && eog %<.jpg  <CR><CR> && exec "redr!"	" 打开树状文件目录  
 
 map <C-l> :tabn<cr>             			" 下一个tab
 map <C-h> :tabp<cr>             			" 上一个tab
@@ -321,10 +401,10 @@ hi MBEChanged guibg=darkblue ctermbg=darkblue
 " ===> Spell checking
 " ******************************************************************************************** "
 
-"Pressing ,ss will toggle and untoggle spell checking
+" Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
-"Shortcuts using <leader>
+" Shortcuts using <leader>
 map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
@@ -334,6 +414,159 @@ map <leader>s? z=
 " ===> Python section
 " ******************************************************************************************** "
 
+" pydiction 1.2 python auto complete
+" filetype plugin on
+" let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
+" defalut g:pydiction_menu_height == 15
+" let g:pydiction_menu_height = 20 
+
+" ******************************************************************************************** "
+" ===> Neocomplcache plugin
+" ******************************************************************************************** "
+
+" Disable AutoComplPop.
+
+let g:acp_enableAtStartup = 0
+
+" Use neocomplcache.
+
+let g:neocomplcache_enable_at_startup = 1
+
+" Use smartcase.
+
+let g:neocomplcache_enable_smart_case = 1
+
+" Use camel case completion.
+
+let g:neocomplcache_enable_camel_case_completion = 1
+
+" Use underbar completion.
+
+let g:neocomplcache_enable_underbar_completion = 1
+
+" Set minimum syntax keyword length.
+
+let g:neocomplcache_min_syntax_length = 3
+
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+" AutoComplPop like behavior.
+
+let g:neocomplcache_enable_auto_select = 1
+
+" When you input 'ho-a',neocomplcache will select candidate 'a'.
+
+let g:neocomplcache_enable_quick_match = 1
+
+" * Define dictionary.
+let g:neocomplcache_dictionary_filetype_lists = {
+    \ 'default' : '',
+    \ 'php_funclist' : '~/.vim/dict/php_funclist.dict', 
+    \ 'css' : '~/.vim/dict/css.dict', 
+    \ 'c' : '~/.vim/dict/c.dict', 
+    \ 'cpp' : '~/.vim/dict/cpp.dict', 
+    \ 'scale' : '~/.vim/dict/scale.dict', 
+    \ 'javascript' : '~/.vim/dict/javascript.dict'
+    \ }
+
+" let g:neocomplcache_snippets_dir=$VIMFILES."/snippets"
+
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
+
+inoremap <expr><C-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
+
+" Define keyword.
+
+if !exists('g:neocomplcache_keyword_patterns')
+
+  let g:neocomplcache_keyword_patterns = {}
+
+endif
+
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+
+imap <C-k>     <Plug>(neocomplcache_snippets_expand)
+
+smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+
+inoremap <expr><C-g>     neocomplcache#undo_completion()
+
+inoremap <expr><C-z>     neocomplcache#undo_completion()
+
+inoremap <expr><C-l>     neocomplcache#complete_common_string()
+
+" SuperTab like snippets behavior.
+
+"imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Recommended key-mappings.
+
+" <CR>: close popup and save indent.
+
+" inoremap <expr><CR>  neocomplcache#close_popup() . "\<CR>"
+
+inoremap <expr><CR> pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+
+" <TAB>: completion. THIS HAS NO USE WHEN WITH SNIPMATE
+
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" <SPACE>: completion.
+
+inoremap <expr><space>  pumvisible() ? neocomplcache#close_popup() . "\<SPACE>" : "\<SPACE>"
+
+" <C-h>, <BS>: close popup and delete backword char.
+
+inoremap <expr><C-h> neocomplcache#close_popup()."\<C-h>"
+
+inoremap <expr><BS> neocomplcache#close_popup()."\<C-h>" 
+
+inoremap <expr><C-y>  neocomplcache#close_popup()
+
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
+
+" Shell like behavior(not recommended).
+
+"set completeopt+=longest
+
+"let g:neocomplcache_enable_auto_select = 1
+
+"let g:neocomplcache_disable_auto_complete = 1
+
+"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<TAB>"
+
+"inoremap <expr><CR>  neocomplcache#close_popup() . "\<CR>"
+
+" Enable omni completion.
+
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
 
+" Enable heavy omni completion.
+
+if !exists('g:neocomplcache_omni_patterns')
+
+   let g:neocomplcache_omni_patterns = {}
+
+endif
+
+let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+
+let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+
+let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
+
+let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
