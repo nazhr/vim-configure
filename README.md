@@ -269,26 +269,65 @@ Neocomplcache 自动补全
 let g:neocomplcache_enable_at_startup = 1
 ```
 
+12. Tabpage install
+---
+##commit : 
+一个分页容纳一或多个窗口。分页间很容易切换，这种方式使你可以拥有多个窗口集合，每个集合做不同的工作。
+
+##url :   
+		http://www.vim.org/scripts/script.php?script_id=3712
+
+##cmd : 
+*
+##install : 
+		cp -r * ../../
+
+##config -- .vimrc
+```
+set showtabline=2 	" set tab page height 
+set guitablabel=%t
+```
+12. TaskList install
+---
+##commit : 
+调用任务列表窗口。
+
+##url :   
+		http://www.vim.org/scripts/script.php?script_id=2607
+
+##cmd : 
+*
+##install : 
+		cp -r * ../../
+
+##config -- .vimrc
+```
+map t :TaskList<CR>
+```
+
 * 其它插件(选择安装) 	<br/>
+---
+CSCope	<br/>
+
 Fugitive	<br/>
-    让 Vim 更好地与 Git 整合	<br/>
+	让 Vim 更好地与 Git 整合	<br/>
 Powerline<br/>
-    炫丽实用的状态栏 	<br/>
+    	炫丽实用的状态栏 	<br/>
 Tagbar	<br/>
-    比 taglist 更现代的代码结构浏览工具 	<br/>
+    	比 taglist 更现代的代码结构浏览工具 	<br/>
 The NERD tree	<br/>
-    以树形结构浏览文件夹中的文件 	<br/>
+    	以树形结构浏览文件夹中的文件 	<br/>
 Syntastic	<br/>
-    语法检查 	<br/>
+    	语法检查 	<br/>
 surround.vim	<br/>
-    快速删除/修改光标周围配对的括号 	<br/>
+    	快速删除/修改光标周围配对的括号 	<br/>
 Project	<br/>
-    方便管理工程中的文件 	<br/>
+    	方便管理工程中的文件 	<br/>
 snipmate.vim<br/>
-    在编辑中实现模板展开 	<br/>
+    	在编辑中实现模板展开 	<br/>
 a.vim<br/>
-    在.cpp/.h等文件对中跳转 	<br/>
+    	在.cpp/.h等文件对中跳转 	<br/>
 matchit.zip	<br/>
-    增强%的功能 	<br/>
+    	增强%的功能 	<br/>
 winmanager<br/>
-    将文件管理窗口和taglist堆叠起来。 	<br/>
+    	将文件管理窗口和taglist堆叠起来。 	<br/>
