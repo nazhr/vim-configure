@@ -11,15 +11,15 @@
 	目录树
 
 ####url : 
-		https://github.com/scrooloose/nerdtree.git
+	https://github.com/scrooloose/nerdtree.git
 
 ####cmd : 
-		mkdir bundle
-		cd ~/.vim/bundle
-		git clone https://github.com/scrooloose/nerdtree.git
+	mkdir bundle
+	cd ~/.vim/bundle
+	git clone https://github.com/scrooloose/nerdtree.git
 
 ####install : 
-		cp * ../../
+	cp * ../../
 
 ####config -- .vimrc
 ```
@@ -36,15 +36,15 @@ map <C-j> :bp<cr>               " 上一个文件
 	目录树
 
 ####url : 
-		https://github.com/jistr/vim-nerdtree-tabs.git
+	https://github.com/jistr/vim-nerdtree-tabs.git
 
 ####cmd : 
-		mkdir bundle
-		cd ~/.vim/bundle
-		git clone https://github.com/jistr/vim-nerdtree-tabs.git
+	mkdir bundle
+	cd ~/.vim/bundle
+	git clone https://github.com/jistr/vim-nerdtree-tabs.git
 
 ####install : 
-		cp * ../../
+	cp * ../../
 
 ####config -- .vimrc
 ```
@@ -59,15 +59,15 @@ imap <F3> :NERDTreeTabsToggle <CR>         		" 设置关闭目录树的快捷键
 	中文帮助文档
 
 ####url : 
-		http://sourceforge.net/projects/vimcdoc/files/vimcdoc/1.8.0/vimcdoc-1.8.0.tar.gz
+	http://sourceforge.net/projects/vimcdoc/files/vimcdoc/1.8.0/vimcdoc-1.8.0.tar.gz
 
 ####cmd : 
-		mkdir bundle
-		cd ~/.vim/bundle
-		wget http://sourceforge.net/projects/vimcdoc/files/vimcdoc/1.8.0/vimcdoc-1.8.0.tar.gz
+	mkdir bundle
+	cd ~/.vim/bundle
+	wget http://sourceforge.net/projects/vimcdoc/files/vimcdoc/1.8.0/vimcdoc-1.8.0.tar.gz
 
 ####install : 
-		./vimcdoc.sh -i
+	./vimcdoc.sh -i
 
 ####config -- .vimrc
 ```
@@ -85,10 +85,10 @@ set encoding=utf-8
 	*
 
 ####cmd : 
-		ctags -R *
+	ctags -R *
 
 ####install : 
-		sudo apt-get install ctags
+	sudo apt-get install ctags
 
 ####config -- .vimrc
 ```
@@ -102,18 +102,17 @@ set autochdir
 	方法/函数索引列表	
 
 ####url : 
-		http://www.vim.org/scripts/script.php?script_id=273
+	http://www.vim.org/scripts/script.php?script_id=273
 
 ####cmd : 
 	*
 
 ####install : 
-		cp -r * ../../
+	cp -r * ../../
 
 ####config -- .vimrc
-
-		nnoremap <silent> <F8> :TlistToggle<CR><CR>	" 按F8按钮，在窗口的左侧出现taglist的窗口, 像vc的左侧的workpace
 ```
+nnoremap <silent> <F8> :TlistToggle<CR><CR>	" 按F8按钮，在窗口的左侧出现taglist的窗口, 像vc的左侧的workpace
 " :Tlist              				" 调用TagList
 let Tlist_Auto_Open=0 				" 默认打开Taglist 
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'  
@@ -129,13 +128,13 @@ let Tlist_File_Fold_Auto_Close=1             	" 自动折叠
 	插件 bufexplorer 是一款可以让你更加轻松的在各个 buffer 之间进行切换。
 
 ####url : 
-		http://www.vim.org/scripts/script.php?script_id=42
+	http://www.vim.org/scripts/script.php?script_id=42
 
 ####cmd : 
 	*
 
 ####install : 
-		cp -r * ../../
+	cp -r * ../../
 
 ####config -- .vimrc
 ```
@@ -147,13 +146,13 @@ map <F6> :BufExplorer<CR>
 ####commit : 
 	＊
 ####url : 
-		http://www.vim.org/scripts/script.php?script_id=159
+	http://www.vim.org/scripts/script.php?script_id=159
 
 ####cmd : 
 	＊
 
 ####install : 
-		cp -r * ../../
+	cp -r * ../../
 
 ####config -- .vimrc
 ```
@@ -184,7 +183,7 @@ hi MBEChanged guibg=darkblue ctermbg=darkblue
 	Vim 自带的拼写检查(Spell Check)
 
 ####url : 
-		https://github.com/vim-scripts/SpellCheck
+	https://github.com/vim-scripts/SpellCheck
 
 ####cmd : 
 	*
@@ -209,7 +208,7 @@ map <leader>s? z=
 	pydiction 用来实现代码补全和语法提示功能
 
 ####url : 
-		https://github.com/rkulla/pydiction.git 
+	https://github.com/rkulla/pydiction.git 
 
 ####cmd : 
 	*
@@ -252,12 +251,12 @@ let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
 	Neocomplcache 自动补全
 
 ####url :   
-		http://www.vim.org/scripts/script.php?script_id=2620
+	http://www.vim.org/scripts/script.php?script_id=2620
 
 ####cmd : 
 	*
 ####install : 
-		cp -r * ../../
+	cp -r * ../../
 
 ####config -- .vimrc
 ```
@@ -270,12 +269,12 @@ let g:neocomplcache_enable_at_startup = 1
 	一个分页容纳一或多个窗口。分页间很容易切换，这种方式使你可以拥有多个窗口集合，每个集合做不同的工作。
 
 ####url :   
-		http://www.vim.org/scripts/script.php?script_id=3712
+	http://www.vim.org/scripts/script.php?script_id=3712
 
 ####cmd : 
-*
+	*
 ####install : 
-		cp -r * ../../
+	cp -r * ../../
 
 ####config -- .vimrc
 ```
@@ -302,29 +301,29 @@ map t :TaskList<CR>
 
 * 其它插件(选择安装) 	<br/>
 ---
-1. CSCope	<br/>
-	* cscope主要用来协助浏览C/C++语言，他的功能要强大于ctags，不仅支持变量/函数的定义查询，还记录了函数的调用处查询等功能，所以也有说法称cscope的诞生就是为了取代ctags。	<br/>
-2. Beautify statusline <br/>
-	* vim 状态行主题插件	<br/>
-3. Fugitive	<br/>
-	* 让 Vim 更好地与 Git 整合	<br/>
-4. Powerline<br/>
-    	* 炫丽实用的状态栏 	<br/>
-5. Tagbar	<br/>
-    	* 比 taglist 更现代的代码结构浏览工具 	<br/>
-6. The NERD tree	<br/>
-    	* 以树形结构浏览文件夹中的文件 	<br/>
-7. Syntastic	<br/>
-    	* 语法检查 	<br/>
-8. surround.vim	<br/>
-    	* 快速删除/修改光标周围配对的括号 	<br/>
-9. Project	<br/>
-    	* 方便管理工程中的文件 	<br/>
-10. snipmate.vim<br/>
-    	* 在编辑中实现模板展开 	<br/>
-11. a.vim<br/>
-    	* 在.cpp/.h等文件对中跳转 	<br/>
-12. matchit.zip	<br/>
-    	* 增强%的功能 	<br/>
-13. winmanager<br/>
-    	* 将文件管理窗口和taglist堆叠起来。 	<br/>
+1. CSCope
+	* cscope主要用来协助浏览C/C++语言，他的功能要强大于ctags，不仅支持变量/函数的定义查询，还记录了函数的调用处查询等功能，所以也有说法称cscope的诞生就是为了取代ctags。
+2. Beautify statusline
+	* vim 状态行主题插件
+3. Fugitive
+	* 让 Vim 更好地与 Git 整合
+4. Powerline
+	* 炫丽实用的状态栏
+5. Tagbar
+	* 比 taglist 更现代的代码结构浏览工具
+6. The NERD tree
+	* 以树形结构浏览文件夹中的文件
+7. Syntastic
+	* 语法检查
+8. surround.vim
+	* 快速删除/修改光标周围配对的括号
+9. Project
+	* 方便管理工程中的文件
+10. snipmate.vim
+	* 在编辑中实现模板展开
+11. a.vim
+	* 在.cpp/.h等文件对中跳转
+12. matchit.zip
+	* 增强%的功能
+13. winmanager
+	* 将文件管理窗口和taglist堆叠起来
