@@ -240,6 +240,15 @@ pydiction 用来实现代码补全和语法提示功能
 	$ cp after/ftplugin/python_pydiction.vim ~/.vim/after/ftplugin
 	$ cp complete-dict ~/.vim
 	$ cp pydiction.py ~/.vim
+	
+	* 解决tab键冲突问题：
+		* Pydiction tab键修改：
+		sudo ~/.vim/bundle/Pydiction/after/ftplugin/python_pydiction.vim 找到这行
+		inoremap <silent> <buffer> <TAB>
+		修改为下面这样，就可以通过Ctrl+p来进行补全了。
+		inoremap <silent> <buffer> <C-y>
+		inoremap <silent> <buffer> <S-TAB>换成
+		inoremap <silent> <buffer> <C-S-y>
 ```
 
 ##config -- .vimrc
