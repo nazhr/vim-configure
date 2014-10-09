@@ -327,3 +327,5 @@ map t :TaskList<CR>
 	* 增强%的功能
 13. winmanager
 	* 将文件管理窗口和taglist堆叠起来
+14. indentLine
+	* 显示对齐线插件
