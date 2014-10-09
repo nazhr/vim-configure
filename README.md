@@ -317,7 +317,9 @@ map t :TaskList<CR>
 * 其它插件(选择安装) 	<br/>
 ---
 CSCope	<br/>
-
+	cscope主要用来协助浏览C/C++语言，他的功能要强大于ctags，不仅支持变量/函数的定义查询，还记录了函数的调用处查询等功能，所以也有说法称cscope的诞生就是为了取代ctags。	<br/>
+Beautify statusline <br/>
+	vim 状态行主题插件	<br/>
 Fugitive	<br/>
 	让 Vim 更好地与 Git 整合	<br/>
 Powerline<br/>
