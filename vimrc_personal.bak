@@ -436,11 +436,7 @@ map <leader>s? z=
 " ===> Python section
 " ******************************************************************************************** "
 
-" pydiction 1.2 python auto complete
-" filetype plugin on
-" let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
-" defalut g:pydiction_menu_height == 15
-" let g:pydiction_menu_height = 20 
+
 
 " ******************************************************************************************** "
 " ===> Neocomplcache plugin
