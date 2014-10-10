@@ -329,3 +329,5 @@ map t :TaskList<CR>
 	* 将文件管理窗口和taglist堆叠起来
 14. indentLine
 	* 显示对齐线插件
+15. ctrlp
+	* Full path fuzzy file, buffer, mru, tag, ... finder for Vim
