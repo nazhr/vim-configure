@@ -307,7 +307,8 @@ map t :TaskList<CR>
 	*
 
 ####cmd : 
-	*
+	cscope -Rdkp // 生成cscope.out cscope.ini ... 配置文件。详细查看帮助
+	
 ####install : 
 	linux : apt-get install cscope / windows : exe install
 
@@ -445,6 +446,10 @@ if has("cscope")
     " timeoutlent (default: 1000 = 1 second, which is sluggish) is used.
     "
     "set ttimeoutlen=100
+    
+    " cscope.out config file dir added .
+    " cs add /home/kylin/cscope.out /home/kylin/
+    
 endif
 ```
 
