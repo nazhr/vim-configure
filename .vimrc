@@ -6,17 +6,7 @@
 " => VIM Base Configure
 " ******************************************************************************************** "
 
-" ******************************************************************************************** "
-" ===> VIM dict Configure
-" ******************************************************************************************** "
-au FileType php setlocal dict+=~/.vim/dict/php_funclist.dict
-au FileType css setlocal dict+=~/.vim/dict/css.dict
-au FileType c setlocal dict+=~/.vim/dict/c.dict
-au FileType cpp setlocal dict+=~/.vim/dict/cpp.dict
-au FileType scale setlocal dict+=~/.vim/dict/scale.dict
-au FileType javascript setlocal dict+=~/.vim/dict/javascript.dict
-au FileType html setlocal dict+=~/.vim/dict/javascript.dict
-au FileType html setlocal dict+=~/.vim/dict/css.dict
+
 
 " ******************************************************************************************** "
 " ===> VIM General Configure
@@ -367,21 +357,27 @@ endif
 " ===> ctags plugin
 " ******************************************************************************************** "
 
-"set tags=tags  			                                " 设置tags  
-"set autochdir 
+if has("ctags")
+    "set tags=tags  			                                " 设置tags  
+    "set autochdir 
+
+endif
 
 " ******************************************************************************************** "
 " ===> taglist plugin
 " ******************************************************************************************** "
 
-nnoremap <silent> <F8> :TlistToggle<CR>		                " 按F8按钮，在窗口的左侧出现taglist的窗口, 像vc的左侧的workpace
-" :Tlist              				                        " 调用TagList
-let Tlist_Auto_Open=0 				                        " 默认打开Taglist 
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'  
-let Tlist_Show_One_File=0                    	            " 只显示当前文件的tags
-let Tlist_Exit_OnlyWindow=1                  	            " 如果Taglist窗口是最后一个窗口则退出Vim
-let Tlist_Use_Right_Window=1                 	            " 在右侧窗口中显示taglist窗口
-let Tlist_File_Fold_Auto_Close=1             	            " 自动折叠
+if has("TagList")
+    nnoremap <silent> <F8> :TlistToggle<CR>		                " 按F8按钮，在窗口的左侧出现taglist的窗口, 像vc的左侧的workpace
+    " :Tlist              				                        " 调用TagList
+    let Tlist_Auto_Open=0 				                        " 默认打开Taglist 
+    let Tlist_Ctags_Cmd = '/usr/bin/ctags'  
+    let Tlist_Show_One_File=0                    	            " 只显示当前文件的tags
+    let Tlist_Exit_OnlyWindow=1                  	            " 如果Taglist窗口是最后一个窗口则退出Vim
+    let Tlist_Use_Right_Window=1                 	            " 在右侧窗口中显示taglist窗口
+    let Tlist_File_Fold_Auto_Close=1             	            " 自动折叠
+
+endif
 
 " ******************************************************************************************** "
 " ===> tabpage plugin
