@@ -169,6 +169,18 @@ set laststatus=2
 " ======> Neatstatusline plugin configure
 " ************************************************************************* "
 
+" Base key-value
+" term         黑白终端的属性  
+" cterm        彩色终端的属性  
+" ctermfg      彩色终端前景色  
+" ctermbg      彩色终端背景色  
+" gui          GUI属性  
+" guifg        GUI前景色  
+" guibg        GUI背景色
+
+let g:NeatStatusLine_color_insert   = 'guifg=#ffffff guibg=#ff0000 gui=bold ctermfg=14 ctermbg=5 cterm=bold'
+let g:NeatStatusLine_color_modified = 'guifg=#ffffff guibg=#ff00ff ctermfg=14 ctermbg=5'
+
 " ******************************************************************************************** "
 " ===> Text, tab and indent related
 " ******************************************************************************************** "
