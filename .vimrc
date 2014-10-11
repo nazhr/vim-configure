@@ -251,11 +251,16 @@ highlight SpellLocal term=underline cterm=underline
 
 set encoding=utf-8
 set fileencoding=utf-8
-set fileencodings=ucs-bom,gb18030,gbk,gb2312,cp936
-set termencoding=utf-8
-set langmenu=zh_CN.UTF-8
-language messages zh_CN.UTF-8
-set guifontset=wenquanyi,-*-16-*-*-*
+if has('win32')
+	set termencoding=chinese
+	language message zh_CN.UTF-8
+else
+	set fileencodings=ucs-bom,gb18030,gbk,gb2312,cp936
+	set termencoding=utf-8
+	set langmenu=zh_CN.UTF-8
+	language messages zh_CN.UTF-8
+	set guifontset=wenquanyi,-*-16-*-*-*
+endif
 
 
 " ******************************************************************************************** "
