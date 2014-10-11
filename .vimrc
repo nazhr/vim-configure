@@ -3,6 +3,28 @@
 " ******************************************************************************************** "
 
 " ******************************************************************************************** "
+" => VIM Determine the operating system
+" ******************************************************************************************** "
+
+let g:iswindows = 0
+let g:islinux = 0
+if(has("win32") || has("win64") || has("win95") || has("win16"))
+    let g:iswindows = 1
+else
+    let g:islinux = 1
+endif
+ 
+" ******************************************************************************************** "
+" => VIM Determine the is terminal or gui
+" ******************************************************************************************** "
+
+if has("gui_running")
+    let g:isGUI = 1
+else
+    let g:isGUI = 0
+endif
+
+" ******************************************************************************************** "
 " => VIM Base Configure
 " ******************************************************************************************** "
 
@@ -251,15 +273,15 @@ highlight SpellLocal term=underline cterm=underline
 
 set encoding=utf-8
 set fileencoding=utf-8
-if has('win32')
-	set termencoding=chinese
-	language message zh_CN.UTF-8
+if (g:iswindows)
+    set termencoding=chinese
+    language message zh_CN.UTF-8
 else
-	set fileencodings=ucs-bom,gb18030,gbk,gb2312,cp936
-	set termencoding=utf-8
-	set langmenu=zh_CN.UTF-8
-	language messages zh_CN.UTF-8
-	set guifontset=wenquanyi,-*-16-*-*-*
+    set fileencodings=ucs-bom,gb18030,gbk,gb2312,cp936
+    set termencoding=utf-8
+    set langmenu=zh_CN.UTF-8
+    language messages zh_CN.UTF-8
+    set guifontset=wenquanyi,-*-16-*-*-*
 endif
 
 " ******************************************************************************************** "
