@@ -3,20 +3,32 @@
 " ******************************************************************************************** "
 
 " ******************************************************************************************** "
+" => VIM Determine the operating system
+" ******************************************************************************************** "
+
+let g:iswindows = 0
+let g:islinux = 0
+if(has("win32") || has("win64") || has("win95") || has("win16"))
+    let g:iswindows = 1
+else
+    let g:islinux = 1
+endif
+ 
+" ******************************************************************************************** "
+" => VIM Determine the is terminal or gui
+" ******************************************************************************************** "
+
+if has("gui_running")
+    let g:isGUI = 1
+else
+    let g:isGUI = 0
+endif
+
+" ******************************************************************************************** "
 " => VIM Base Configure
 " ******************************************************************************************** "
 
-" ******************************************************************************************** "
-" ===> VIM dict Configure
-" ******************************************************************************************** "
-au FileType php setlocal dict+=~/.vim/dict/php_funclist.dict
-au FileType css setlocal dict+=~/.vim/dict/css.dict
-au FileType c setlocal dict+=~/.vim/dict/c.dict
-au FileType cpp setlocal dict+=~/.vim/dict/cpp.dict
-au FileType scale setlocal dict+=~/.vim/dict/scale.dict
-au FileType javascript setlocal dict+=~/.vim/dict/javascript.dict
-au FileType html setlocal dict+=~/.vim/dict/javascript.dict
-au FileType html setlocal dict+=~/.vim/dict/css.dict
+
 
 " ******************************************************************************************** "
 " ===> VIM General Configure
@@ -130,26 +142,44 @@ set autowrite							            " 自动保存
 " ===> Statusline configure
 " ******************************************************************************************** "
 
+" ************************************************************************* "
+" ======> Statusline format configure
+" ************************************************************************* "
 " Always hide the statusline
 set laststatus=2
 
 " Format the statusline
-" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}     "状态行显示的内容    
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
+" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
 
 
-function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
-    return curdir
-endfunction
+" function! CurDir()
+"     let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
+"     return curdir
+" endfunction
 
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    else
-        return ''
-    endif
-endfunction
+" function! HasPaste()
+"     if &paste
+"         return 'PASTE MODE  '
+"     else
+"         return ''
+"     endif
+" endfunction
+
+" ************************************************************************* "
+" ======> Neatstatusline plugin configure
+" ************************************************************************* "
+
+" Base key-value
+" term         黑白终端的属性  
+" cterm        彩色终端的属性  
+" ctermfg      彩色终端前景色  
+" ctermbg      彩色终端背景色  
+" gui          GUI属性  
+" guifg        GUI前景色  
+" guibg        GUI背景色
+
+let g:NeatStatusLine_color_insert   = 'guifg=#ffffff guibg=#ff0000 gui=bold ctermfg=14 ctermbg=5 cterm=bold'
+let g:NeatStatusLine_color_modified = 'guifg=#ffffff guibg=#ff00ff ctermfg=14 ctermbg=5'
 
 " ******************************************************************************************** "
 " ===> Text, tab and indent related
@@ -261,12 +291,16 @@ highlight SpellLocal term=underline cterm=underline
 
 set encoding=utf-8
 set fileencoding=utf-8
-set fileencodings=ucs-bom,gb18030,gbk,gb2312,cp936
-set termencoding=utf-8
-set langmenu=zh_CN.UTF-8
-language messages zh_CN.UTF-8
-set guifontset=wenquanyi,-*-16-*-*-*
-
+if (g:iswindows)
+    set termencoding=chinese
+    language message zh_CN.UTF-8
+else
+    set fileencodings=ucs-bom,gb18030,gbk,gb2312,cp936
+    set termencoding=utf-8
+    set langmenu=zh_CN.UTF-8
+    language messages zh_CN.UTF-8
+    set guifontset=wenquanyi,-*-16-*-*-*
+endif
 
 " ******************************************************************************************** "
 " ===> new file tittle
