@@ -1,3 +1,44 @@
+基本 ：
+===
+1. 基础属性
+	* 由于vim可以在黑白终端、彩色终端、GUI界面下运行，所以需要对其分贝进行配置，下面给出一个简要的文档说明：
+```
+term         黑白终端的属性  
+cterm        彩色终端的属性  
+ctermfg      彩色终端前景色  
+ctermbg      彩色终端背景色  
+gui          GUI属性  
+guifg        GUI前景色  
+guibg        GUI背景色  
+```
+
+	* 由于不是所有终端都支持256色，因此使用一些安全色会使我们的主题更有移植性，而GUI可以支持所有颜色，不在考虑范围之内，vim文档给出的安全色如下：
+```
+"0      Black    
+"1      DarkBlue    
+"2      DarkGreen          
+"3      DarkCyan   
+"4      DarkRed  
+"5      DarkMagenta          
+"6      Brown, DarkYellow              
+"7      LightGray, LightGrey, Gray, Grey                     
+"8      DarkGray, DarkGrey     
+"9      Blue, LightBlue       
+"10     Green, LightGreen            
+"11     Cyan, LightCyan                      
+"12     Red, LightRed                           
+"13     Magenta, LightMagenta   
+"14     Yellow, LightYellow     
+"15     White       
+```
+
+	* 配色语法
+```
+hi Type             ctermfg=LightYellow     ctermbg=Black           cterm=bold
+
+PS : hi是highlight命令的缩写，用于高亮配置；Type是要配色的元素名称，如：StatusLine | ModeMsg ；参数采用的是Key=Value的形式。
+```
+
 安装 ：
 ===
 1. 在Linux中配置，将vim-configure目录拷贝到~/目录下，并且将文件名修改成.vim 。
