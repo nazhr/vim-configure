@@ -559,6 +559,49 @@ if has("cscope")
     "set ttimeoutlen=100
 endif
 
+14. Tabpage install
+
+commit : 状态行主题插件
+
+url : git clone git://github.com/maciakl/vim-neatstatus.git
+
+cmd : 
+	*
+
+install : 
+	Copy `neatstatus.vim` to `~/.vim/after/plugins` directory
+
+config -- .vimrc
+	
+configuration : 
+    1. format : 
+        Information provided from left to right:
+            * Mode Indicator - changes color depending on the editor mode
+            * Server/Session - displays vim servername (graphical) or terminal name (cli)
+            * File path for the file associated with current buffer
+            * File type (eg. python, ruby, etc..)
+            * File format (eg. unix, dos, etc..)
+            * File encoding (eg. utf8, latin1, etc..)
+            * Buffer number
+            * Current line, total number of lines (purple box)
+            * Percentage of file read
+            * Relative column number (from first character)
+            * Absolute column number (from start of line)
+            * Modified / Unmodified (blue box)
+    2. setting : 
+        configure the colors of the status line elements by defining the following global vars in your `.vimrc`:
+        * `g:NeatStatusLine_color_normal` - the color of the mode indicator when in normal mode
+        * `g:NeatStatusLine_color_insert` - the color of the mode indicator when in insert mode
+        * `g:NeatStatusLine_color_replace` - the color of the mode indicator when in replace mode
+        * `g:NeatStatusLine_color_position` - the color of the cursor position box (and session box)
+        * `g:NeatStatusLine_color_line` - the color of the line number in the cursor position box
+        * `g:NeatStatusLine_color_modified` - the color of the "modified" indicator on the right
+        * `g:NeatStatusLine_color_filetype` - the color of the filetype box
+        * `g:NeatStatusLine_separator` - the separator character that divides the boxes by changing
+        example : 
+        let g:NeatStatusLine_color_insert = 'guifg=#ffffff guibg=#ff0000 gui=bold ctermfg=15 ctermbg=9 cterm=bold'
+    
+
 *************************************************************************************************
 其它插件(选择安装)
 

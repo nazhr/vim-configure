@@ -142,26 +142,32 @@ set autowrite							            " 自动保存
 " ===> Statusline configure
 " ******************************************************************************************** "
 
+" ************************************************************************* "
+" ======> Statusline format configure
+" ************************************************************************* "
 " Always hide the statusline
 set laststatus=2
 
 " Format the statusline
-" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}     "状态行显示的内容    
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
+" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
 
 
-function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
-    return curdir
-endfunction
+" function! CurDir()
+"     let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
+"     return curdir
+" endfunction
 
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    else
-        return ''
-    endif
-endfunction
+" function! HasPaste()
+"     if &paste
+"         return 'PASTE MODE  '
+"     else
+"         return ''
+"     endif
+" endfunction
+
+" ************************************************************************* "
+" ======> Neatstatusline plugin configure
+" ************************************************************************* "
 
 " ******************************************************************************************** "
 " ===> Text, tab and indent related
