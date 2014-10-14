@@ -503,7 +503,7 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
 " AutoComplPop like behavior.
 
-let g:neocomplcache_enable_auto_select = 1
+let g:neocomplcache_enable_auto_select = 0
 
 " When you input 'ho-a',neocomplcache will select candidate 'a'.
 
