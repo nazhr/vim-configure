@@ -170,6 +170,14 @@ endfunction
 
 
 
+" ************************************************************************* "
+" ======> Mouse configure
+" ************************************************************************* "
+
+set mouse=a							                " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
+set selection=exclusive
+set selectmode=mouse,key
+
 " ******************************************************************************************** "
 " ===> Text, tab and indent related
 " ******************************************************************************************** "
@@ -177,10 +185,6 @@ endfunction
 set backspace=2							            " 使回格键（backspace）正常处理indent, eol, start等
 
 nmap tt :%s/\t/    /g<CR>					        " 将tab替换为空格
-
-set mouse=a							                " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
-set selection=exclusive
-set selectmode=mouse,key
 
 set showmatch							            " 高亮显示匹配的括号
 
