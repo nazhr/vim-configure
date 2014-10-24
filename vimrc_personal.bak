@@ -173,7 +173,8 @@ endfunction
 " ************************************************************************* "
 " ======> Mouse configure
 " ************************************************************************* "
-set mouse=a	" 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
+
+set mouse=a							                " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
 set selection=exclusive
 set selectmode=mouse,key
 
@@ -502,22 +503,24 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
 " AutoComplPop like behavior.
 
-let g:neocomplcache_enable_auto_select = 1
+let g:neocomplcache_enable_auto_select = 0
 
 " When you input 'ho-a',neocomplcache will select candidate 'a'.
 
 let g:neocomplcache_enable_quick_match = 1
 
 " * Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : '',
-    \ 'php_funclist' : '~/.vim/dict/php_funclist.dict', 
-    \ 'css' : '~/.vim/dict/css.dict', 
-    \ 'c' : '~/.vim/dict/c.dict', 
-    \ 'cpp' : '~/.vim/dict/cpp.dict', 
-    \ 'scale' : '~/.vim/dict/scale.dict', 
-    \ 'javascript' : '~/.vim/dict/javascript.dict'
-    \ }
+if g:islinux
+    let g:neocomplcache_dictionary_filetype_lists = {
+        \ 'default' : '',
+        \ 'php_funclist' : '~/.vim/dict/php_funclist.dict',
+        \ 'css' : '~/.vim/dict/css.dict',
+        \ 'c' : '~/.vim/dict/c.dict',
+        \ 'cpp' : '~/.vim/dict/cpp.dict',
+        \ 'scale' : '~/.vim/dict/scale.dict',
+        \ 'javascript' : '~/.vim/dict/javascript.dict'
+        \ }
+endif
 
 " let g:neocomplcache_snippets_dir=$VIMFILES."/snippets"
 

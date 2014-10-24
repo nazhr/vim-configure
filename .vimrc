@@ -510,15 +510,17 @@ let g:neocomplcache_enable_auto_select = 0
 let g:neocomplcache_enable_quick_match = 1
 
 " * Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : '',
-    \ 'php_funclist' : '~/.vim/dict/php_funclist.dict', 
-    \ 'css' : '~/.vim/dict/css.dict', 
-    \ 'c' : '~/.vim/dict/c.dict', 
-    \ 'cpp' : '~/.vim/dict/cpp.dict', 
-    \ 'scale' : '~/.vim/dict/scale.dict', 
-    \ 'javascript' : '~/.vim/dict/javascript.dict'
-    \ }
+if g:islinux
+    let g:neocomplcache_dictionary_filetype_lists = {
+        \ 'default' : '',
+        \ 'php_funclist' : '~/.vim/dict/php_funclist.dict',
+        \ 'css' : '~/.vim/dict/css.dict',
+        \ 'c' : '~/.vim/dict/c.dict',
+        \ 'cpp' : '~/.vim/dict/cpp.dict',
+        \ 'scale' : '~/.vim/dict/scale.dict',
+        \ 'javascript' : '~/.vim/dict/javascript.dict'
+        \ }
+endif
 
 " let g:neocomplcache_snippets_dir=$VIMFILES."/snippets"
 
