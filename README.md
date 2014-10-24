@@ -1,3 +1,17 @@
+VIM 编译(ubuntu 14.04) ： 
+===
+1. 下载源码 ：
+	apt-get source vim
+
+2. 安装依赖 ： 
+	sudo apt-get install libncurses5-dev
+
+3. 编译 & 安装 ： 
+	$ ./configure --prefix=/usr --sysconfdir=/etc --enable-tclinterp --enable-pythoninterp=yes --enable-perlinterp=yes --enable-rubyinterp=yes --enable-cscope --enable-multibyte --enable-xim --enable-gtk2-check --enable-fontset --with-x
+
+	$ make
+	$ sudo make install
+
 基本 ：
 ===
 1. 基础属性
