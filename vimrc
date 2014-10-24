@@ -261,22 +261,6 @@ set completeopt=preview,menu 					                                            " 
 " au FileType html setlocal dict+=~/.vim/dict/css.dict
 
 " ******************************************************************************************** "
-" ===> 英文拼写检查
-" ====> 拼写错误被画红线，比缺省设置更美观 "
-" ******************************************************************************************** "
-
-set spell spelllang=en_us
-setlocal spell spelllang=en_us
-highlight clear SpellBad
-highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
-highlight clear SpellCap
-highlight SpellCap term=underline cterm=underline
-highlight clear SpellRare
-highlight SpellRare term=underline cterm=underline
-highlight clear SpellLocal
-highlight SpellLocal term=underline cterm=underline
-
-" ******************************************************************************************** "
 " ===> Encodings
 " ******************************************************************************************** "
 
