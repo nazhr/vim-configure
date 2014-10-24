@@ -70,8 +70,6 @@ set go=      							            " 不要图形按钮
 
 set scrolloff=3  						            " 光标移动到buffer的顶部和底部时保持3行距离 
 
-" set laststatus=1   						        " 启动显示状态行(1),总是显示状态行(2) 
-
 " set foldenable  						            " 允许折叠 
 
 " set foldmethod=manual   					        " 手动折叠 
@@ -149,26 +147,36 @@ set autowrite							            " 自动保存
 set laststatus=2
 
 " Format the statusline
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
-
-function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
-    return curdir
-endfunction
-
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    else
-        return ''
-    endif
-endfunction
+" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
+" 
+" function! CurDir()
+"    let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
+"     return curdir
+" endfunction
+" 
+" function! HasPaste()
+"     if &paste
+"         return 'PASTE MODE  '
+"     else
+"         return ''
+"     endif
+" endfunction
 
 " ************************************************************************* "
-" ======> Airline plugin configure
+" ======> Neatstatusline plugin configure
 " ************************************************************************* "
 
+" Base key-value
+" term         黑白终端的属性
+" cterm        彩色终端的属性
+" ctermfg      彩色终端前景色
+" ctermbg      彩色终端背景色
+" gui          GUI属性  
+" guifg        GUI前景色  
+" guibg        GUI背景色
 
+let g:NeatStatusLine_color_insert   = 'guifg=#ffffff guibg=#ff0000 gui=bold ctermfg=14 ctermbg=5 cterm=bold'
+let g:NeatStatusLine_color_modified = 'guifg=#ffffff guibg=#ff00ff ctermfg=14 ctermbg=5'
 
 " ************************************************************************* "
 " ======> Mouse configure
