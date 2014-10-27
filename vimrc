@@ -351,7 +351,7 @@ func CompileTypeTittle()							" script file head, example: python, ruby ...
 	call append(line(".") + 2, "    > Mail : ray.kk.na@gmail.com")
 	call append(line(".") + 3, "    > Created Time : ".strftime("%c"))
 	call append(line(".") + 4, "    > Comment : ")
-	call append(line(".") + 5, " ************************************************************************* /")
+	call append(line(".") + 5, " *************************************************************************/")
 	call append(line(".") + 6, "")
 
 endfunc
