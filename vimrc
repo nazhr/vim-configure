@@ -345,13 +345,13 @@ func ScriptTypeTittle()							" script file head, example: python, ruby ...
 endfunc
 
 func CompileTypeTittle()							" script file head, example: python, ruby ...
-	call setline(1, "/ *************************************************************************")
+	call setline(1, "/*************************************************************************")
 	call append(line("."), "    > File Name : ".expand("%"))
 	call append(line(".") + 1, "    > Author : Ray")
 	call append(line(".") + 2, "    > Mail : ray.kk.na@gmail.com")
 	call append(line(".") + 3, "    > Created Time : ".strftime("%c"))
 	call append(line(".") + 4, "    > Comment : ")
-	call append(line(".") + 5, "  ************************************************************************* /")
+	call append(line(".") + 5, " ************************************************************************* /")
 	call append(line(".") + 6, "")
 
 endfunc
