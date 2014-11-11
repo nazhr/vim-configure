@@ -333,13 +333,13 @@ func SetTitle()
 endfunc 
 
 func ScriptTypeTittle()							" script file head, example: python, ruby ...
-	call append(line(".") + 2, '" *************************************************************************')
-	call append(line(".") + 3, '"   > File Name : '.expand("%"))
-	call append(line(".") + 4, '"   > Author : Ray')
-	call append(line(".") + 5, '"   > Mail : ray.kk.na@gmail.com')
-	call append(line(".") + 6, '"   > Created Time : '.strftime("%c"))
-	call append(line(".") + 7, '"   > Comment : ')
-	call append(line(".") + 8, '" *************************************************************************')
+	call append(line(".") + 2, "# *************************************************************************")
+	call append(line(".") + 3, "#   > File Name : ".expand("%"))
+	call append(line(".") + 4, "#   > Author : Ray")
+	call append(line(".") + 5, "#   > Mail : ray.kk.na@gmail.com")
+	call append(line(".") + 6, "#   > Created Time : ".strftime("%c"))
+	call append(line(".") + 7, "#   > Comment : ")
+	call append(line(".") + 8, "# *************************************************************************")
 	call append(line(".") + 9, "")
 
 endfunc
