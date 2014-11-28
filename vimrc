@@ -113,7 +113,7 @@ set clipboard+=unnamed						        " 共享剪贴板
 " ===> Colors and Fonts
 " ******************************************************************************************** "
 
-colorscheme evening      					        " vim
+colorscheme ron          					        " vim
 
 "set guifont=Courier_New:h10:cANSI    				" 设置字体
 
