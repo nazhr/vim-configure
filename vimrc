@@ -113,8 +113,7 @@ set clipboard+=unnamed						        " 共享剪贴板
 " ===> Colors and Fonts
 " ******************************************************************************************** "
 
-color ron							                " 设置背景主题 
-" colorscheme desert      					        " gvim
+colorscheme desert      					        " vim
 
 "set guifont=Courier_New:h10:cANSI    				" 设置字体
 
@@ -378,8 +377,8 @@ endif
 " ******************************************************************************************** "
 
 let g:nerdtree_tabs_open_on_console_startup=1       	    "设置打开vim的时候默认打开目录树
-map <F3> :NERDTreeTabsToggle <CR>         		            "设置打开目录树的快捷键
-imap <F3> :NERDTreeTabsToggle <CR>         		            "设置关闭目录树的快捷键
+map <F3> :NERDTreeToggle <CR>         		                "设置打开目录树的快捷键
+imap <F3> :NERDTreeToggle <CR>         		                "设置关闭目录树的快捷键
 map <C-F3> \be  
 
 autocmd BufRead,BufNewFile *.dot map <F5> :w<CR>:!dot -Tjpg -o %<.jpg % && eog %<.jpg  <CR><CR> && exec "redr!"	" 打开树状文件目录  
