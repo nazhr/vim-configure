@@ -37,8 +37,8 @@ install :
 config -- .vimrc
 
 let g:nerdtree_tabs_open_on_console_startup=1       	" 设置打开vim的时候默认打开目录树
-map <F3> :NERDTreeTabsToggle <CR>         		" 设置打开目录树的快捷键
-imap <F3> :NERDTreeTabsToggle <CR>         		" 设置关闭目录树的快捷键
+map <F3> :NERDTreeTabsToggle <CR>               		" 设置打开目录树的快捷键
+imap <F3> :NERDTreeTabsToggle <CR>                 		" 设置关闭目录树的快捷键
 
 3. vimcdoc install
 
@@ -89,9 +89,9 @@ install :
 
 config -- .vimrc
 
-nnoremap <silent> <F8> :TlistToggle<CR><CR>	" 按F8按钮，在窗口的左侧出现taglist的窗口, 像vc的左侧的workpace
-" :Tlist              				" 调用TagList
-let Tlist_Auto_Open=0 				" 默认打开Taglist 
+nnoremap <silent> <F8> :TlistToggle<CR><CR>	    " 按F8按钮，在窗口的左侧出现taglist的窗口, 像vc的左侧的workpace
+" :Tlist              				            " 调用TagList
+let Tlist_Auto_Open=0 				            " 默认打开Taglist 
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'  
 let Tlist_Show_One_File=1                    	" 只显示当前文件的tags
 let Tlist_Exit_OnlyWindow=1                  	" 如果Taglist窗口是最后一个窗口则退出Vim
