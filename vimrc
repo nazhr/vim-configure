@@ -40,8 +40,8 @@ set showcmd							                " 在状态栏显示正在输入的命令
 
 set number							                " 显示行号
 
-set cul 							                " 高亮光标所在行
-set cuc
+" set cul 							                " 高亮光标所在行
+" set cuc
 
 filetype on							                " 侦测文件类型
 filetype plugin on						            " 载入文件类型插件
