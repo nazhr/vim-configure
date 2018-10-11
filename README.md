@@ -1,4 +1,8 @@
-VIM 编译(ubuntu 14.04) ： 
+使用vim-configure
+===
+下载vim-configure后，拷贝到/Users/naxxx目录下，将文件夹名称修改为.vim即可直接使用。PS：支持Linux和MacOS。
+
+编译(ubuntu 14.04) ： 
 ===
 1. 下载源码 ：
 ```
